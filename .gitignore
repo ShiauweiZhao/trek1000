@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+#mac
+
+#logtxt
+*.txt
+*.mat
