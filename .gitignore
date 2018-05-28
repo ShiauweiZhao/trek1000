@@ -36,3 +36,4 @@
 #logtxt
 *.txt
 *.mat
+.DS_Store
