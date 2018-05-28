@@ -26,21 +26,13 @@ clear log_hour log_minu log_sec log_msec log_t ;
 gt_t = timestamp/1e6;
 gt_time = gt_t - gt_t(1);
 %% x
-
 plot(gt_time,pos_x,'LineWidth',1.5);grid on;hold on;plot(log_time,x,'r','LineWidth',1.5);legend('gt','log');xlabel('time(ms)');ylabel('value')
 hold off;
 %% y
 figure
 plot(gt_time,pos_y,'LineWidth',1.5);grid on;hold on;plot(log_time,y,'r','LineWidth',1.5);legend('gt','log');xlabel('time(ms)');ylabel('value')
 hold off;
-
+%%z
 figure
-
 plot(gt_time,pos_z,'LineWidth',1.5);grid on;hold on;plot(log_time,z,'r','LineWidth',1.5);legend('gt','log');xlabel('time(ms)');ylabel('value')
-
-
-
-
-
-
 
