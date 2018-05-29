@@ -34,7 +34,7 @@
 #mac
 
 #logtxt
-*.txt
+log*.txt
 *.mat
 .DS_Store
 
