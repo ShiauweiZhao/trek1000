@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/zhaoxiaowei/Desktop/terk1000logprocessing/uwb.cpp
+fstream
+-
+iostream
+-
+string
+-
+iomanip
+-
+unistd.h
+-
+
