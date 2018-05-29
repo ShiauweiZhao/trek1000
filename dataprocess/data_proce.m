@@ -1,16 +1,17 @@
+close all;
 clear
 clc
 
     addpath ..\data\optitrack;
     addpath ..\data\trek1000;
 
-taglog='log11.txt';
-optitracklog='gt-1.txt';
+taglog='log22.txt';
+optitracklog='gt-2.txt';
 tag=importdata(taglog);
 optitrack=importdata(optitracklog);
 taglength = size(tag.data);
 optitracklength=size(optitrack(:,1));%%length
-[timeuwb,x,y,z] = importtaglog(taglog,45, taglength);%%tag log to mat 
+[timeuwb,x,y,z] = importtaglog(taglog,20, taglength);%%tag log to mat 
 [timestamp,pos_x,pos_z,pos_y,q_w,q_x,q_y,q_z] = optitracktomat(optitracklog,1, optitracklength); %%optitrack log tomat
 clear taglog optireacklog taglenth optitracklength£ª
 %%º∆À„trek1000 ±º‰¥¡
@@ -26,13 +27,14 @@ clear log_hour log_minu log_sec log_msec log_t ;
 gt_t = timestamp/1e6;
 gt_time = gt_t - gt_t(1);
 %% x
+figure('name','POS_X')
 plot(gt_time,pos_x,'LineWidth',1.5);grid on;hold on;plot(log_time,x,'r','LineWidth',1.5);legend('gt','log');xlabel('time(ms)');ylabel('value')
 hold off;
 %% y
-figure
+figure('name','POS_Y')
 plot(gt_time,pos_y,'LineWidth',1.5);grid on;hold on;plot(log_time,y,'r','LineWidth',1.5);legend('gt','log');xlabel('time(ms)');ylabel('value')
 hold off;
-%%z
-figure
+%% Z
+figure('name','POS_Z')
 plot(gt_time,pos_z,'LineWidth',1.5);grid on;hold on;plot(log_time,z,'r','LineWidth',1.5);legend('gt','log');xlabel('time(ms)');ylabel('value')
 
