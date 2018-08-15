@@ -4,4 +4,4 @@ cmake_minimum_required(VERSION 2.8)
 #项目信息
 project(ProcessTrek1000Log)
 
-add_executable(Demo uwb.cpp)
+add_executable(logprocess uwb.cpp)
